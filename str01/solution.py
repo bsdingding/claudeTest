@@ -41,9 +41,11 @@ if __name__ == "__main__":
         ("110100110001", 12),
         ("0" * 50 + "1" * 50,  100),
         ("0" * 100 + "1" * 99, 198),
+        ("0" * 50001 + "1" * 49999, 99998),
     ]
 
     for s, expected in cases:
         result = find_max_length(s)
         status = "OK" if result == expected else "FAIL"
-        print(f"[{status}] s={s!r:12s}  got={result}  expected={expected}")
+        display = s if len(s) <= 12 else f"(len={len(s)})"
+        print(f"[{status}] s={display!r:20s}  got={result}  expected={expected}")
