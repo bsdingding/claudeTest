@@ -2,7 +2,7 @@
 input=$(cat)
 command=$(echo "$input" | jq -r '.tool_input.command // ""')
 
-if ! echo "$command" | grep -qE "gh pr create"; then
+if ! echo "$command" | grep -qE "^\s*gh pr create"; then
   exit 0
 fi
 
