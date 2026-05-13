@@ -1,0 +1,15 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/Users/bytedance/repos/leetcode/.claude/hooks/pr-review.sh"
+          }
+        ]
+      }
+    ]
+  }
+}
